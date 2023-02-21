@@ -27,12 +27,3 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name = azurerm_resource_group.example.name
 }
 
-# Configuration de l'backend pour stocker l'état dans Terraform Cloud
-terraform {
-  backend "remote" {
-    organization = "rachidpoly"
-    workspaces {
-      name = "rachidworkplace"
-    }
-  }
-}
