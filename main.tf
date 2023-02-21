@@ -12,21 +12,27 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
 # Define an example resource group using the "azurerm_resource_group" resource type.
 resource "azurerm_resource_group" "example" {
-  name = "example-resource2"
+  name     = "example-resource2"
   location = "West Europe"
 }
-    # The name of your Terraform Cloud organization.
-    organization = "rachidpoly"
-    
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "rachidworkplace"
+
 # Création du réseau virtuel
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
   address_space       = ["10.0.1.0/24"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
+}
+
+# Configuration de l'backend pour stocker l'état dans Terraform Cloud
+terraform {
+  backend "remote" {
+    organization = "rachidpoly"
+    workspaces {
+      name = "rachidworkplace"
+    }
+  }
 }
