@@ -19,7 +19,7 @@ provider "azurerm" {
 # Define an example resource group using the "azurerm_resource_group" resource type.
 resource "azurerm_resource_group" "example" {
   name     = "example-resource2"
-  location = "West Europe"
+  location = "eastus"
 }
 
 # Création du réseau virtuel
