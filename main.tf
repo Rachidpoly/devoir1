@@ -1,14 +1,14 @@
-# The configuration for the `remote` backend.
+# Azure Provider source and version being used
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.46.0"
+      version = "=3.0.0"
     }
   }
 }
 
-# Déclaration du fournisseur Microsoft Azure
+# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
