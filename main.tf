@@ -23,8 +23,8 @@ resource "azurerm_resource_group" "rg" {
 }
 
 # Création du réseau virtuel
-resource "azurerm_VN_Devoir1Rachid" "VN" {
-  name                = "Devoir1Rachid"
+resource "azurerm_virtual_network" "vnet" {
+  name                = "Devoir1RachidVN"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
