@@ -37,18 +37,8 @@ resource "azurerm_virtual_machine" "example_vm" {
   resource_group_name   = "CR460Devoir1Rachid"
   network_interface_ids = []
   vm_size               = "Standard_B2s"
-  }
-storage_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
-    version   = "latest"
-  }
 
-  os_disk {
-    name              = "example-os-disk"
-    caching           = "ReadWrite"
-    storage_account_type = "Standard_LRS"
+
   
 }
 
