@@ -28,7 +28,7 @@ resource "azurerm_virtual_network" "vnet" {
   address_space       = ["10.0.0.0/16"]
   location = "East US"
   resource_group_name = azurerm_resource_group.rg.name
-  
+  }
   resource "azurerm_virtual_machine" "main" {
   name                  = "Devoir1RachidVM"
   location              = azurerm_resource_group.example.location
