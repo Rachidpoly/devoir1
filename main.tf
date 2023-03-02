@@ -35,7 +35,7 @@ resource "azurerm_virtual_machine" "example_vm" {
   name                  = "Devoir1RachidVM"
   location              = "East US"
   resource_group_name   = "CR460Devoir1Rachid"
-  network_interface_ids = [azurerm_network_interface.1]
+  network_interface_ids = [azurerm_network_interface]
   vm_size               = "Standard_B2s"
 
 }
