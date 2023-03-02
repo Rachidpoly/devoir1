@@ -17,7 +17,7 @@ provider "azurerm" {
 }
 
 # Define an example resource group using the "azurerm_resource_group" resource type.
-resource "ressourcegroupedevoir1" "rg" {
+resource "azurerm_resource_group" "rg" {
   name     = "CR460Devoir1Rachid"
   location = "eastus"
 }
