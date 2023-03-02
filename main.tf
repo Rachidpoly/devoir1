@@ -29,9 +29,14 @@ resource "azurerm_virtual_network" "vnet" {
   location = "East US"
   resource_group_name = azurerm_resource_group.rg.name
   }
-  resource "azurerm_virtual_machine" "main" {
+
+# creation de machine virtuel
+resource "azurerm_virtual_machine" "example_vm" {
   name                  = "Devoir1RachidVM"
-  resource_group_name   = azurerm_resource_group.rg.name
-  vm_size               = "Standard_DS1_v2"
+  location              = "East US"
+  resource_group_name   = "CR460Devoir1Rachid"
+  network_interface_ids = [azurerm_network_interface.example_nic.id]
+  vm_size               = "Standard_B2s"
+
 }
 
