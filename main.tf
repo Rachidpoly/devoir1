@@ -22,12 +22,13 @@ resource "azurerm_resource_group" "rg" {
   location = "West Europe"
 }
 
-resource "azurerm_virtual_network" "rg" {
-  name                = "rg-network"
+# Création du réseau virtuel
+resource "azurerm_virtual_network" "vnet" {
+  name                = "Devoir1RachidVN"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-}
+  }
 
 resource "azurerm_subnet" "rg" {
   name                 = "internal"
@@ -49,7 +50,7 @@ resource "azurerm_network_interface" "rg" {
 }
 
 resource "azurerm_linux_virtual_machine" "rg" {
-  name                = "rg-machine"
+  name                = "Devoir1RachidVM"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_F2"
