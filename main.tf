@@ -17,14 +17,14 @@ provider "azurerm" {
 }
 
 # Define an example resource group using the "azurerm_resource_group" resource type.
-resource "azurerm_resource_group" "example" {
-  name     = "example-resource2"
+resource "CR460Devoir1Rachid" "RG" {
+  name     = "CR460Devoir1Rachid"
   location = "eastus"
 }
 
 # Création du réseau virtuel
-resource "azurerm_virtual_network" "example" {
-  name                = "example-network"
+resource "azurerm_VN_Devoir1Rachid" "VN" {
+  name                = "Devoir1Rachid"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
