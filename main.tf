@@ -11,8 +11,8 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-
 }
+
 variable "prefix" {
   default = "Devoir1RachidVM"
 }
@@ -84,3 +84,4 @@ resource "azurerm_virtual_machine" "main" {
   tags = {
     environment = "staging"
   }
+}
