@@ -14,7 +14,7 @@ provider "azurerm" {
 
 }
 variable "prefix" {
-  default = "tfvmex"
+  default = "Devoir1RachidVM"
 }
 
 resource "azurerm_resource_group" "example" {
