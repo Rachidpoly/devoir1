@@ -30,7 +30,12 @@ resource "azurerm_virtual_network" "vnet" {
   resource_group_name = azurerm_resource_group.rg.name
   }
 
-
+resource "azurerm_subnet" "example" {
+  name                 = "subnet1"
+  resource_group_name  = azurerm_resource_group.rg.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
 resource "azurerm_network_interface" "example" {
   name                = "my-nic"
   location            = azurerm_resource_group.rg.location
