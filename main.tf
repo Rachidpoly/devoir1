@@ -58,10 +58,6 @@ resource "azurerm_linux_virtual_machine" "rg" {
     azurerm_network_interface.rg.id,
   ]
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
 
   os_disk {
     caching              = "ReadWrite"
