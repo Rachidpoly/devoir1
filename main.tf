@@ -49,6 +49,6 @@ storage_image_reference {
     name              = "example-os-disk"
     caching           = "ReadWrite"
     storage_account_type = "Standard_LRS"
-  }
+  
 }
 
